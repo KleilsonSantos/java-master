@@ -1,4 +1,12 @@
+/**
+ * 
+ */
 package br.com.java.application;
+
+/**
+ * @author Kleilson Santos 
+ *
+ */
 
 import java.util.Locale;
 
@@ -6,19 +14,19 @@ public class Program {
 
 	public static void main(String[] args) {
 		/*
-		 * Definindo o 'Locale.US' para os numeros de ponto flutuante sejam visualizados
+		 * Definindo o 'Locale.US' para os números de ponto flutuante sejam visualizados
 		 * com '.' no lugar da ','
 		 */
 		Locale.setDefault(Locale.US);
 		
 		/*
-		 * Escrevendo na tela um texto qualquer e pulando linha com comando
+		 * Escrevendo na tela um texto qualquer e pulando linha com o comando
 		 * 'System.out.println()'
 		 */
 		System.out.println("Bom dia");
 		
 		/*
-		 * Escrevendo na tela um texto qualquer sem pular linha com comando
+		 * Escrevendo na tela um texto qualquer sem pular linha com o comando
 		 * 'System.out.print()'
 		 */
 		System.out.print("Bom tarde");
@@ -30,12 +38,12 @@ public class Program {
 		System.out.printf("%n%.2f%n", 501.23234);
 		
 		/*
-		 * Concatenando strings com System.out.println()
+		 * Concatenando strings com o comando System.out.println()
 		 */
 		System.out.println("Bom dia, " + "Boa Tarde");
 		
 		/*
-		 * Concatenando varios elementos
+		 * Concatenando vários elementos
 		 */
 		String nome = "Maria";
 		int idade = 31;
