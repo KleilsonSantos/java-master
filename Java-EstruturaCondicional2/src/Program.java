@@ -22,34 +22,37 @@ public class Program {
 
 		System.out.print("Entrada: ");
 		int valor = scanner.nextInt();
+		String dia;
 
 		switch (valor) {
-		case 1:
-			System.out.println("Dia da semana: domingo");
+		case 1: 
+			dia = "domingo";
 			break;
 		case 2:
-			System.out.println("Dia da semana: segunda");
+			dia = "segunda";
 			break;
 		case 3:
-			System.out.println("Dia da semana: terça");
+			dia = "terça";
 			break;
 		case 4:
-			System.out.println("Dia da semana: quarta");
+			dia = "quarta";
 			break;
 		case 5:
-			System.out.println("Dia da semana: quinta");
+			dia = "quinta";
 			break;
 		case 6:
-			System.out.println("Dia da semana: sexta");
+			dia = "domingo";
 			break;
 		case 7:
-			System.out.println("Dia da semana: sabado");
+			dia = "sexta";
 			break;
 		default:
-			System.out.println("Dia da semana, inválido!");
+			dia = "inválido!";
 			break;
 		}
 
+		System.out.println("Dia da semana: " + dia);
+		
 		// fechando o scanner.
 		scanner.close();
 	}
