@@ -6,7 +6,7 @@
  *a ser pago.
  * 
  */
-package br.com.java.application;
+
 
 import java.util.InputMismatchException;
 
