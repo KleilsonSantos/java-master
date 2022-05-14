@@ -4,7 +4,7 @@
  * Escrever na tela o dia da semana correspondente.
  * 
  */
-package br.com.java.application;
+
 
 /**
  * @author Kleilson Santos 
