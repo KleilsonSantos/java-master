@@ -3,15 +3,12 @@ package br.com.springboot.myproject.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Categoria implements Serializable{
+public class Categoria implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private Long ID;
 	private String name;
-	
+
 	public Categoria() {
 	}
 
@@ -53,5 +50,5 @@ public class Categoria implements Serializable{
 		Categoria other = (Categoria) obj;
 		return Objects.equals(ID, other.ID);
 	}
-	
+
 }
