@@ -7,10 +7,10 @@ public class Produto {
 	private Long ID;
 	private String nome;
 	private Double preco;
-	
+
 	public Produto() {
 	}
-	
+
 	public Produto(Long iD, String nome, Double preco) {
 		ID = iD;
 		this.nome = nome;
@@ -62,5 +62,5 @@ public class Produto {
 	public String toString() {
 		return "Produto [ID=" + ID + ", nome=" + nome + ", preco=" + preco + "]";
 	}
-	
+
 }
