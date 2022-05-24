@@ -1,41 +1,26 @@
 package br.com.java.section18.model.application;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Locale;
 
-import br.com.java.section18.model.entities.CarRental;
-import br.com.java.section18.model.entities.Vehicle;
-import br.com.java.section18.model.services.BrazilTaxService;
-import br.com.java.section18.model.services.RentalService;
+import br.com.java.section18.model.entities.Circle;
+import br.com.java.section18.model.entities.Rectangle;
+import br.com.java.section18.model.enuns.Colors;
 
 public class Program {
 
 	public static void main(String[] args) {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm");
 		Locale.setDefault(Locale.UK);
-		try {
-			String model = "Civic";
-			Date in = sdf.parse("25/06/2018 10:30");
-			Date out = sdf.parse("25/06/2018 14:40");
-			double valuePerHour = 10.0;
-			double valuePerDay = 130.0;
-			
-			CarRental cR = new CarRental(in, out, new Vehicle(model));
-			RentalService rS = new RentalService(valuePerHour, valuePerDay, new BrazilTaxService());
-			rS.processingInvoice(cR);
-			
-			System.out.println("INVOICE");
-			System.out.println("Basic payment: " + String.format("%.2f", cR.getInvoice().getBasicPayment()));
-			System.out.println("Tax: " + cR.getInvoice().getTax());
-			System.out.println("Total payment: " + String.format("%.2f", cR.getInvoice().getTotalPayment()));
-		} catch (ParseException e) {
-			System.err.println("Error: " + e.getMessage());
-		} catch (NullPointerException e) {
-			System.err.println("Error: " + e.getMessage());
-		}
-
+		Circle circle1 = new Circle(3.0, Colors.GREEN);
+		Circle circle2 = new Circle(5.0, Colors.RED);
+		Rectangle rectangle1 = new Rectangle(10.0, 20.0, Colors.BLUE);
+		Rectangle rectangle2 = new Rectangle(10.0, 20.0, Colors.CORAL);
+		
+		System.err.println("=========================");
+		System.out.println("Circle area: " + String.format("%.2f", circle1.area()));
+		System.out.println("Circle area: " + String.format("%.2f", circle2.area()));
+		System.out.println("Rectangle area: " + String.format("%.2f", rectangle1.area()));
+		System.out.println("Rectangle area: " + String.format("%.2f", rectangle2.area()));
+		System.err.println("=========================");
 	}
 	
 }
