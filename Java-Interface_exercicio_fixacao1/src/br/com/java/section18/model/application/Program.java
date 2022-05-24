@@ -4,31 +4,39 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Scanner;
 
 import br.com.java.section18.model.entities.Contract;
 import br.com.java.section18.model.entities.Installment;
-import br.com.java.section18.model.services.PaypalService;
 import br.com.java.section18.model.services.ContractService;
+import br.com.java.section18.model.services.PaypalService;
 
 public class Program {
 
-	public static void main(String[] args) throws ParseException {
+	public static void main(String[] args) {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Locale.setDefault(Locale.UK);
+		Scanner scanner = new Scanner(System.in);
 
-		int number = 8021;
-		Date in = sdf.parse("25/06/2018");
-		double totalValue = 600.00;
-		int months = 3;
-		Contract contract = new Contract(number, in, totalValue);
-		ContractService cS = new ContractService(new PaypalService());
-
-		cS.processContract(contract, months);
-	
-		for(Installment installment : contract.getList()) {
-			System.out.println(installment);
+		try {
+			System.out.print("Contract number:");
+			int contractNumber = scanner.nextInt();
+			System.out.print("Date:");
+			Date in = sdf.parse(scanner.next());
+			System.out.print("Value:");
+			double totalValue = scanner.nextDouble();
+			System.out.print("Months number:");
+			int monthsNumber = scanner.nextInt();
+			Contract contract = new Contract(contractNumber, in, totalValue);
+			ContractService contractService = new ContractService(new PaypalService());
+			contractService.processContract(contract, monthsNumber);
+			for (Installment installment : contract.getList()) {
+				System.out.println(installment);
+			}
+		} catch (ParseException e) {
+			e.getMessage();
 		}
-		
+		scanner.close();
 	}
 
 }
