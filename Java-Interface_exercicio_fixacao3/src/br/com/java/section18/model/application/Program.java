@@ -7,9 +7,10 @@ public class Program {
 	public static void main(String[] args) {
 
 		ComboDevice comboDevice = new ComboDevice();
-		comboDevice.print("Interface Print!");
 		comboDevice.processDoc("Metodo processDoc()");
+		comboDevice.print("Interface Print!");
 		System.err.println(comboDevice.scan());
+		
 	}
 
 }

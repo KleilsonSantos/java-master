@@ -1,5 +1,8 @@
 package br.com.java.section18.model.entities;
 
+import br.com.java.section18.model.services.Print;
+import br.com.java.section18.model.services.Scanner;
+
 public class ComboDevice extends Device implements Print, Scanner {
 
 	@Override
