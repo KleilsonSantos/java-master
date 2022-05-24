@@ -39,7 +39,7 @@ public class Circle extends Shape{
 
 	@Override
 	public String showString() {
-		return "Implements: Interface -> Shape in Circle class.";
+		return "Implements: Interface \nShape in Circle class.";
 	}
 
 }
