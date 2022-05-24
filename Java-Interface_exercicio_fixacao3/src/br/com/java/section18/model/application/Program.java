@@ -16,14 +16,12 @@ public class Program {
 		Rectangle rectangle1 = new Rectangle(10.0, 20.0,Colors.BLUE);
 		Rectangle rectangle2 = new Rectangle(10.0, 20.0,Colors.CORAL);
 		
-		System.out.println("=========================");
 		System.out.println("Circle area: " + String.format("%.2f", circle1.area()));
 		System.out.println("Circle area: " + String.format("%.2f", circle2.area()));
 		System.out.println("Rectangle area: " + String.format("%.2f", rectangle1.area()));
 		System.out.println("Rectangle area: " + String.format("%.2f", rectangle2.area()));
 		System.err.println(circle1.showString());
 		System.err.println(rectangle1.showString());
-		System.out.println("=========================");
 	}
 	
 }
