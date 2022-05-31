@@ -1,14 +1,14 @@
 package br.com.java.model.services;
 
-import br.com.java.model.entities.InvalideOperation;
-
 public interface InterestService {
-	double getInterest();
+	
+	double getInterestRate();
 
-	default double payment(double amount, int months) {
+	default public double payment(double amount, int months) {
 		if (months < 1) {
-			throw new InvalideOperation("Error: mês inválido.");
+			throw new IllegalAccessError();
+		} else {
+			return amount * Math.pow((1 + getInterestRate() / 100), months);
 		}
-		return amount * Math.pow((1 + (getInterest() / 100)), months);
 	}
 }
