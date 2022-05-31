@@ -26,17 +26,13 @@ public class PrintService {
 		if (listInt.isEmpty()) {
 			throw new IllegalAccessError("List is empty");
 		}
-		Integer max = listInt.get(0);
-		System.out.print("[ " + max);
+		Integer first = listInt.get(0);
+		System.out.print("[" + first);
 		for (int i = 1; i < listInt.size(); i++) {
-			if (max > listInt.get(i)) {
-				System.out.print(", " + listInt.get(i));
-			} else {
-				System.out.print(", " + max);
-				max = listInt.get(i);
-			}
+			Integer element = listInt.get(i);
+			System.out.print("," + element);
 		}
-		System.out.print(" ]\n");
+		System.out.print("]\n");
 	}
 
 }

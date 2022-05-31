@@ -15,7 +15,6 @@ public class Program {
 			Integer integer = vetInt[i];
 			ps.addValue(integer);
 		}
-
 		ps.print();
 		System.out.print("First: ");
 		System.out.println(ps.first());
